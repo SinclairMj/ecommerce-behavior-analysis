@@ -5,13 +5,19 @@
 [![MySQL](https://img.shields.io/badge/Database-MySQL-orange)](https://www.mysql.com/)
 
 ## 📌 项目用途与业务场景
-本项目是一个面向电商零售运营、市场分析师及管理层的**端到端数据分析与动态 BI 看板系统**。
+本项目是一个面向电商零售运营、市场分析师及管理层的**端到端数据分析与动态 BI 看板系统和洞察隐性用户分群与深层消费规律**。
 主要解决以下实际业务痛点：
 * **多维大盘监控**：实时追踪平台总 GMV、订单量、活跃用户及客单价（AOV）。
 * **时间序列分析**：提供直观的**年度同比增长 (YoY)** 与 **月度环比增长 (MoM)** 监控，辅助管理层进行业绩复盘。
 * **市场与人群洞察**：支持按性别、年龄段、支付方式进行侧边栏多维联动筛选，精准定位特定细分市场的偏好。
 * **季节性选品矩阵**：自动化归纳不同季节下各商品类目的销售占比，指导市场部进行科学备货与营销。
 * **RFM 客户价值分层**：利用动态打分模型识别高价值客户与流失风险客户，赋能精准营销。
+* **EDA 探索性分析与用户复购漏斗**：计算用户多维消费频次与复购转化率，构建品类交叉共现矩阵，精准定位业务转化边界。
+* **Apriori 商品关联规则挖掘**：基于 `mlxtend` 库对全量订单进行购物篮分析（Market Basket Analysis），深入探究多品类即时决策与单品支撑度（Support）特征。
+* **K-Means 机器学习无监督用户聚类画像**：
+  * **特征工程**：提取每个用户的消费总金额 (Monetary)、购买频次 (Frequency)、平均客单价 (AOV) 及品类多样性。
+  * **模型训练**：使用 `StandardScaler` 进行数据标准化，消除量纲影响。
+  * **智能分群**：运用 **K-Means 算法** 自动将约 10 万名用户聚类为 4 大阶梯消费画像（从占 68% 的大众基础客群到贡献巨大但仅占 2% 的核心 VIP 鲸鱼用户群），为精细化精准营销提供定量支撑。
 
 ---
 
@@ -21,6 +27,7 @@
 3. **全链路技术栈**：Python (Pandas) + MySQL (SQLAlchemy) + Streamlit 构建的轻量级、响应式 Web 数据应用。
 <img width="3838" height="1895" alt="image" src="https://github.com/user-attachments/assets/f9c09989-2268-4e6a-9f52-80d281ebc8b9" />
 <img width="3356" height="1484" alt="image" src="https://github.com/user-attachments/assets/dc78808f-d436-4431-b7c0-f762d7bcb66f" />
+<img width="3417" height="1419" alt="image" src="https://github.com/user-attachments/assets/155fe61b-4a8c-4c64-b109-3bf4f5c2c875" />
 
 ---
 
